@@ -9,7 +9,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
+        <exec.mainClass>com.mycompany._progettolibreria_4a.App</exec.mainClass>
         <exec.mainClass>com.mycompany._libreria_4a_fork.App</exec.mainClass>
     </properties>
     <name>2024_libreria_4A</name>
+    <dependencies>
+        <dependency>
+            <groupId>cn.vorbote</groupId>
+            <artifactId>enhancement4j</artifactId>
+            <version>0.0.1</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
 </project>
