@@ -42,6 +42,7 @@ public class App
         String[] elencoTitoliAutore;
         Libro[] libriPresenti;
         String nomeFile="volumi.csv";
+        String nomeFileBinario="scaffale.bin";
         
         vociMenu[0]="\t--> Esci";
         vociMenu[1]="\t--> Visualizza tutti i volumi presenti";
@@ -52,6 +53,9 @@ public class App
         vociMenu[6]="\t--> Mostra libri presenti in ordine alfabetico di titolo";
         vociMenu[7]="\t--> Esporta i volumi su file CSV";
         vociMenu[8]="\t--> Importa i volumi da file CSV";
+        vociMenu[9]="\t--> Salva dati Scaffale";
+        vociMenu[10]="\t--> Carica dati Scaffale";
+        
         
         menu=new Menu(vociMenu);
        
@@ -304,6 +308,41 @@ public class App
                     }
                 }
                     break;
+                    
+                //da provare
+                case 9:
+                {
+                    try 
+                    {
+                        s1.salvaScaffale(nomeFile);
+                        System.out.println("Salvataggio avvenuto correttamente");
+                    } 
+                    catch (IOException ex) 
+                    {
+                        System.out.println("Impossibile salvare su file.");
+                    }
+                }
+                    break;
+                case 10:
+                {
+                    try 
+                    {
+                        //carica Scaffale
+                        s1=s1.caricaScaffale(nomeFileBinario);
+                        System.out.println("Caricamento avvenuto con successo");
+                    } 
+                    catch (IOException ex) 
+                    {
+                        System.out.println("Impossibile leggere da file");
+                    }
+                    catch (ClassNotFoundException ex) 
+                    {
+                        System.out.println("Impossibile leggere i dati dello scaffale");
+                    }
+                }
+                    break;
+
+                    
 
                     
             }  

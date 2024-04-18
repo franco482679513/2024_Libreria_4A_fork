@@ -3,12 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany._progettolibreria_4a;
+import java.io.Serializable;
 
 /**
  * Classe che rappresenta un libro
  * @author gian
  */
-public class Libro 
+public class Libro implements Serializable
 {
     
     private String titolo;
